@@ -1,0 +1,64 @@
+/*
+SORTING
+
+1. (15 points) Show all steps (draw data structures at each step, etc.) for questions a-e below:
+
+Perform sorting (by hand) on the following array: 1 7 8 5 3 6 4 2
+
+a. Simulate selection sort.
+b. Simulate insertion sort.
+c. Simulate merge sort.
+d. Simulate quick sort.
+e. Simulate heap sort.
+
+a. Selection Sort:
+1 7 8 5 3 6 4 2 (initial array)
+1 7 8 5 3 6 4 2 (1 is the smallest element, no swap needed)
+1 2 8 5 3 6 4 7 (2 is the smallest element, swap with 7)
+1 2 3 5 8 6 4 7 (3 is the smallest element, swap with 8)
+1 2 3 4 8 6 5 7 (4 is the smallest element, swap with 8)
+1 2 3 4 5 6 8 7 (5 is the smallest element, swap with 8)
+1 2 3 4 5 6 7 8 (6 is the smallest element, swap with 8)
+1 2 3 4 5 6 7 8 (7 is the smallest element, swap with 8)
+1 2 3 4 5 6 7 8 (8 is the smallest element, no swap needed)
+
+b. Insertion Sort:
+1 7 8 5 3 6 4 2 (initial array)
+1 7 8 5 3 6 4 2 (1 is the first element, no action needed)
+1 7 8 5 3 6 4 2 (7 is greater than 1, no action needed)
+1 7 8 5 3 6 4 2 (8 is greater than 7, no action needed)
+1 5 7 8 3 6 4 2 (5 is less than 8, shift 8 to the right, then shift 7 to the right, and insert 5)
+1 3 5 7 8 6 4 2 (3 is less than 8, shift 8 to the right, then shift 7 to the right, then shift 5 to the right, and insert 3)
+1 3 5 6 7 8 4 2 (6 is less than 8, shift 8 to the right, then shift 7 to the right, and insert 6)
+1 3 4 5 6 7 8 2 (4 is less than 8, shift 8 to the right, then shift 7 to the right, then shift 6 to the right, then shift 5 to the right, and insert 4)
+1 2 3 4 5 6 7 8 (2 is less than 8, shift 8 to the right, then shift 7 to the right, then shift 6 to the right, then shift 5 to the right, then shift 4 to the right, then shift 3 to the right, and insert 2)   
+
+c. Merge Sort:
+1 7 8 5 3 6 4 2 (initial array)
+1 7 8 5 | 3 6 4 2 (split into two halves)
+1 7 | 8 5 | 3 6 | 4 2 (split each half into two halves)
+1 | 7 | 8 | 5 | 3 | 6 | 4 | 2 (split each half into two halves)
+1 7 | 5 8 | 3 6 | 2 4 (merge pairs of elements)
+1 5 7 8 | 2 3 4 6 (merge pairs of elements)
+1 2 3 4 5 6 7 8 (merge the two halves)
+
+d. Quick Sort:
+1 7 8 5 3 6 4 2 (initial array)
+1 2 8 5 3 6 4 7 (choose 1 as pivot, partition the array)
+1 2 3 5 8 6 4 7 (choose 2 as pivot, partition the right subarray)
+1 2 3 4 8 6 5 7 (choose 3 as pivot, partition the right subarray)
+1 2 3 4 5 6 8 7 (choose 4 as pivot, partition the right subarray)
+1 2 3 4 5 6 7 8 (choose 5 as pivot, partition the right subarray)
+
+e. Heap Sort:
+1 7 8 5 3 6 4 2 (initial array)
+8 7 6 5 3 1 4 2 (build a max heap)
+8 7 6 5 3 1 4 2 (swap the first element with the last element, then heapify the reduced heap)
+7 5 6 2 3 1 4 8 (swap the first element with the last element, then heapify the reduced heap)
+6 5 4 2 3 1 7 8 (swap the first element with the last element, then heapify the reduced heap)
+5 3 4 2 1 6 7 8 (swap the first element with the last element, then heapify the reduced heap)
+4 3 1 2 5 6 7 8 (swap the first element with the last element, then heapify the reduced heap)
+3 2 1 4 5 6 7 8 (swap the first element with the last element, then heapify the reduced heap)
+2 1 3 4 5 6 7 8 (swap the first element with the last element, then heapify the reduced heap)
+1 2 3 4 5 6 7 8 (swap the first element with the last element, then heapify the reduced heap)
+*/
